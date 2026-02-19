@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Alejo Ferrari Cioffi</title>
     
+    <meta property="og:title" content="Alejo Ferrari Cioffi | Desarrollador de Software">
+    <meta property="og:description" content="Portafolio profesional. Proyectos en Python, Java, SQL y Desarrollo Web.">
+    <meta property="og:image" content="https://alejofc08.github.io/Portafolio/imagenes/yo.png">
+    <meta property="og:url" content="https://alejofc08.github.io/Portafolio/">
+    <meta property="og:type" content="website">
+
     <link rel="icon" href="imagenes/yo.png" type="image/png">
     
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -35,22 +43,18 @@
         </div>
     </header>
     
-
-    <section id="hero">
+    <section id="hero" data-aos="fade-in" data-aos-duration="1500">
         <div class="hero-content">
-            <div class="imagen"> 
+            <div class="imagen" data-aos="zoom-in" data-aos-delay="200"> 
                 <img src="imagenes/yo.png" alt="Alejo Ferrari Cioffi"> 
             </div>
-            <div class="texto">
+            <div class="texto" data-aos="fade-right" data-aos-delay="400">
                 <h1>¡Hola! </h1>
                 <h1>Soy Alejo Ferrari Cioffi</h1>
-                <p>Estudiante de la Tecnicatura en Desarrollo de Software,
-                    actualmente en busca de insertarme en el mercado
-                    laboral con el objetivo de adquirir experiencia en mi área
-                    de estudio.</p>
+                <p>Estudiante de Desarrollo de Software apasionado por la creación de soluciones eficientes. Combino mi formación técnica en lenguajes como Python y Java con habilidades prácticas de gestión y digitalización de procesos para resolver problemas reales en entornos dinámicos.</p>
 
                 <div class="redes">
-                    <a class="CV" href="CV - Ferrari Cioffi  Alejo.pdf" download="CV - Ferrari Cioffi  Alejo.pdf"> 
+                    <a class="CV" href="CV - Ferrari Cioffi  Alejo.pdf" target="_blank" download="CV_Alejo_Ferrari_Cioffi.pdf"> 
                         <button class="ui-btn">
                             <span>Descargar CV</span>
                         </button> 
@@ -66,57 +70,29 @@
 
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
-            <h2>Sobre Mí</h2>
-            <p><span>Hola, soy Alejo Ferrari Cioffi.</span> Me considero una persona organizada, resolutiva, con
-                capacidad para trabajar en grupo e impulsar el
-                desarrollo colectivo.</p>
+            <h2 data-aos="fade-up">Sobre Mí</h2>
+            <p data-aos="fade-up"><span>Hola, soy Alejo Ferrari Cioffi.</span> Me considero una persona organizada, resolutiva, con
+                capacidad para trabajar en equipo e impulsar el desarrollo de proyectos tecnológicos que aporten valor real.</p>
 
             <div class="fila">
-                <div class="col">
+                <div class="col" data-aos="fade-right">
                     <h3>Datos Personales</h3>
                     <ul>
-                        <li>
-                            <strong>Dirección</strong>
-                            Paternal, 1416 CABA
-                        </li>
-                        <li>
-                            <strong>Teléfono</strong>
-                            1165520810
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            alejoferraricioffi0@gmail.com
-                        </li>
+                        <li><strong>Dirección:</strong> Paternal, 1416 CABA</li>
+                        <li><strong>Teléfono:</strong> 1165520810</li>
+                        <li><strong>Email:</strong> alejoferraricioffi0@gmail.com</li>
                     </ul>
                 </div>
 
-                <div class="col">
+                <div class="col" data-aos="fade-left">
                     <h3>Tecnologías</h3>
                     <div class="contenedor-intereses">
-                        <div class="interes">
-                            <i class="fa-brands fa-html5"></i>
-                            <span>HTML</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <span>CSS</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-brands fa-js"></i>
-                            <span>JS</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-brands fa-python"></i>
-                            <span>PYTHON</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-brands fa-java"></i>
-                            <span>JAVA</span>
-                        </div>
+                        <div class="interes"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+                        <div class="interes"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+                        <div class="interes"><i class="fa-brands fa-js"></i><span>JS</span></div>
+                        <div class="interes"><i class="fa-brands fa-python"></i><span>PYTHON</span></div>
+                        <div class="interes"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                        <div class="interes"><i class="fa-brands fa-java"></i><span>JAVA</span></div>
                     </div>
                 </div>
             </div>
@@ -125,15 +101,15 @@
 
     <section id="experiencia" class="sobremi">
         <div class="contenido-seccion">
-            <h2>Experiencia Laboral</h2>
+            <h2 data-aos="fade-up">Experiencia Laboral</h2>
             <div class="fila" style="display: block;">
-                <div class="col" style="width: 100%;">
+                <div class="col" style="width: 100%;" data-aos="fade-up">
                     <h3>Preceptor y Líder de Digitalización</h3>
                     <p style="color: #0056b3; margin-bottom: 10px;"><strong>Colegio Fasta Monseñor Aneiros</strong> | Julio 2021 - Actualidad</p>
                     <ul style="list-style-type: disc; padding-left: 20px; color: #555;">
-                        <li style="margin-bottom: 8px;">Lideré iniciativas orientadas a la mejora de procesos internos mediante la digitalización y automatización de tareas administrativas.</li>
-                        <li style="margin-bottom: 8px;">Implementé herramientas digitales (Excel/Google Sheets) para optimizar la gestión de información, reduciendo tiempos operativos y mejorando la comunicación entre equipos.</li>
-                        <li style="margin-bottom: 8px;">Coordiné actividades con enfoque en la resolución de problemas, la organización eficiente y el trabajo colaborativo.</li>
+                        <li style="margin-bottom: 8px;">Diseñé y desarrollé un sistema automatizado para el seguimiento y reporte de asistencia utilizando funciones avanzadas de Google Sheets, reduciendo significativamente los tiempos operativos.</li>
+                        <li style="margin-bottom: 8px;">Lideré iniciativas de transformación digital para optimizar la gestión de la información, mejorando la integridad de los datos y la comunicación entre equipos administrativos.</li>
+                        <li style="margin-bottom: 8px;">Coordiné actividades diarias con un fuerte enfoque en la resolución ágil de problemas y la organización eficiente.</li>
                     </ul>
                 </div>
             </div>
@@ -141,17 +117,17 @@
     </section>
 
     <section id="projects">
-        <h2>Estudios</h2>
+        <h2 data-aos="fade-up">Estudios</h2>
         
-        <div class="project">
+        <div class="project" data-aos="fade-up">
             <img src="imagenes/UADE-FOTO1-1.jpeg" alt="uade">
             <div class="info-project">
                 <h3>TECNICATURA UNIVERSITARIA EN DESARROLLO DE SOFTWARE</h3>
-                <p>UADE, CABA | JULIO 2023 - ACTUALIDAD</p>
+                <p>UADE, CABA | JULIO 2024 - ACTUALIDAD</p>
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" data-aos="fade-up">
             <img src="imagenes/Colegio-FASTA-Monseñor-Aneiros_en-Flores.jpg" alt="fasta">
             <div class="info-project">
                 <h3>BACHILLER MERCANTIL</h3>
@@ -159,9 +135,9 @@
             </div>
         </div>
 
-        <h2>Cursos</h2>
+        <h2 data-aos="fade-up">Cursos</h2>
 
-        <div class="project">
+        <div class="project" data-aos="fade-up">
             <img src="imagenes/JA.jpeg" alt="JUNIOR">
             <div class="info-project">
                 <h3>JUNIOR ACHIEVEMENT</h3>
@@ -172,12 +148,12 @@
 
    <section id="proyectos" class="portfolio">
     <div class="contenido-seccion">
-        <h2>Proyectos</h2>
+        <h2 data-aos="fade-up">Proyectos</h2>
         
         <div class="lista-proyectos">
 
           <a href="https://alejofc08.github.io/Corte-Criollo/" target="_blank">
-            <div class="project">
+            <div class="project" data-aos="fade-up">
                 <img src="imagenes/CorteCriollo.png" alt="Corte Criollo Barbería">
                 <div class="info-project">
                     <h3>Corte Criollo</h3>
@@ -192,11 +168,11 @@
           </a>
 
            <a href="https://estudiocontablefretesgarcia.com.ar" target="_blank">
-            <div class="project">
+            <div class="project" data-aos="fade-up">
                 <img src="imagenes/FretesGarcia.png" alt="Estudio Contable Fretes Garcia">
                 <div class="info-project">
                     <h3>Estudio Fretes Garcia</h3>
-                    <p>Sitio profesional para estudio contable. Interfaz moderna que refleja la identidad corporativa y optimiza la experiencia de usuario.</p>
+                    <p><strong>Proyecto Freelance (Cliente Real).</strong> Sitio profesional para estudio contable. Interfaz moderna que refleja la identidad corporativa y optimiza la experiencia de usuario.</p>
                     <div class="tags">
                         <span class="tag">Web Design</span>
                         <span class="tag">Profesional</span>
@@ -207,8 +183,8 @@
            </a>
 
             <a href="https://github.com/AlejoFC08/Wordle" target="_blank"> 
-               <div class="project">
-                <img src="imagenes/wordle.png" alt="Juego Wordle en Python">
+               <div class="project" data-aos="fade-up">
+                <img src="imagenes/python-logo.png" alt="Logo de Python" style="object-fit: contain; padding: 15px; background: white;">
                 <div class="info-project">
                     <h3>Juego Wordle (Python)</h3>
                     <p>Implementación del clásico juego de adivinanzas con lógica de validación, manejo de errores y retroalimentación visual.</p>
@@ -222,8 +198,8 @@
             </a>
 
             <a href="https://github.com/AlejoFC08/Tp--Anime---POO" target="_blank"> 
-                <div class="project">
-                 <img src="imagenes/POO.png" alt="TP Anime POO">
+                <div class="project" data-aos="fade-up">
+                 <img src="imagenes/java-logo.png" alt="Logo de Java" style="object-fit: contain; padding: 10px; background: white;">
                  <div class="info-project">
                      <h3>Sistema de Anime (TP Final POO)</h3>
                      <p>Trabajo final de la materia Paradigmas Orientados a Objetos. Modelado de dominio complejo aplicando herencia, polimorfismo y buenas prácticas.</p>
@@ -242,17 +218,26 @@
 
    <footer>
         <div class="redes">
-            <a class="CV" href="CV - Ferrari Cioffi  Alejo.pdf" download="CV - Ferrari Cioffi  Alejo.pdf"> <button class="ui-btn">
-                 <span>
-                   Descargar CV
-                 </span>
-               </button> </a>
+            <a class="CV" href="CV - Ferrari Cioffi  Alejo.pdf" target="_blank" download="CV_Alejo_Ferrari_Cioffi.pdf"> 
+                <button class="ui-btn">
+                 <span>Descargar CV</span>
+               </button> 
+            </a>
  
              <a class="red" href="https://github.com/AlejoFC08" target="_blank"><i class="fa-brands fa-github"></i></a>
              <a class="red" href="mailto:alejoferraricioffi0@gmail.com?" target="_blank"><i class="fa-solid fa-envelope"></i></a>
              <a class="red" href="https://www.linkedin.com/in/alejo-ferrari-cioffi/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
          </div>  
-         <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">&copy; 2026 Alejo Ferrari Cioffi</p>
+         <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">&copy; 2024 Alejo Ferrari Cioffi</p>
       </footer>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 1000, 
+          once: true,
+          offset: 100
+        });
+      </script>
 </body>
 </html>
