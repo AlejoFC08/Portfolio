@@ -1,4 +1,6 @@
-// 1. LÓGICA DEL MENÚ HAMBURGUESA (Mantenemos lo que ya tenías)
+// ==========================================
+// 1. LÓGICA DEL MENÚ HAMBURGUESA
+// ==========================================
 const menuToggle = document.getElementById('mobile-menu');
 const navList = document.querySelector('nav ul.nav-list');
 
@@ -25,7 +27,9 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// 2. NUEVA LÓGICA DE SCROLL SUAVE (Solución Definitiva)
+// ==========================================
+// 2. LÓGICA DE SCROLL SUAVE (Smooth Scroll)
+// ==========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault(); // Evita el salto brusco automático
@@ -44,8 +48,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
             window.scrollTo({
                 top: offsetPosition,
-                behavior: "smooth" // Aquí forzamos la animación suave
+                behavior: "smooth"
             });
         }
+    });
+});
+
+// ==========================================
+// 3. INICIALIZACIÓN DE ANIMACIONES AOS
+// ==========================================
+// Usamos DOMContentLoaded para asegurarnos de que el HTML haya cargado 
+// antes de inicializar los efectos visuales.
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        duration: 1000, // Duración de la animación (1 segundo)
+        once: true,     // La animación solo ocurre la primera vez que haces scroll
+        offset: 100     // Distancia de scroll antes de que empiece a animar
     });
 });

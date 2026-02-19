@@ -14,13 +14,13 @@
     <link rel="icon" href="imagenes/yo.png" type="image/png">
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -102,14 +102,14 @@
     <section id="experiencia" class="sobremi">
         <div class="contenido-seccion">
             <h2 data-aos="fade-up">Experiencia Laboral</h2>
-            <div class="fila" style="display: block;">
-                <div class="col" style="width: 100%;" data-aos="fade-up">
+            <div class="fila">
+                <div class="col col-completa" data-aos="fade-up">
                     <h3>Preceptor y Líder de Digitalización</h3>
-                    <p style="color: #0056b3; margin-bottom: 10px;"><strong>Colegio Fasta Monseñor Aneiros</strong> | Julio 2021 - Actualidad</p>
-                    <ul style="list-style-type: disc; padding-left: 20px; color: #555;">
-                        <li style="margin-bottom: 8px;">Diseñé y desarrollé un sistema automatizado para el seguimiento y reporte de asistencia utilizando funciones avanzadas de Google Sheets, reduciendo significativamente los tiempos operativos.</li>
-                        <li style="margin-bottom: 8px;">Lideré iniciativas de transformación digital para optimizar la gestión de la información, mejorando la integridad de los datos y la comunicación entre equipos administrativos.</li>
-                        <li style="margin-bottom: 8px;">Coordiné actividades diarias con un fuerte enfoque en la resolución ágil de problemas y la organización eficiente.</li>
+                    <p class="experiencia-subtitulo"><strong>Colegio Fasta Monseñor Aneiros</strong> | Julio 2021 - Actualidad</p>
+                    <ul class="lista-experiencia">
+                        <li>Diseñé y desarrollé un sistema automatizado para el seguimiento y reporte de asistencia utilizando funciones avanzadas de Google Sheets, reduciendo significativamente los tiempos operativos.</li>
+                        <li>Lideré iniciativas de transformación digital para optimizar la gestión de la información, mejorando la integridad de los datos y la comunicación entre equipos administrativos.</li>
+                        <li>Coordiné actividades diarias con un fuerte enfoque en la resolución ágil de problemas y la organización eficiente.</li>
                     </ul>
                 </div>
             </div>
@@ -184,7 +184,7 @@
 
             <a href="https://github.com/AlejoFC08/Wordle" target="_blank"> 
                <div class="project" data-aos="fade-up">
-                <img src="imagenes/python-logo.png" alt="Logo de Python" style="object-fit: contain; padding: 15px; background: white;">
+                <img src="imagenes/python-logo.png" alt="Logo de Python" class="logo-tecnologia">
                 <div class="info-project">
                     <h3>Juego Wordle (Python)</h3>
                     <p>Implementación del clásico juego de adivinanzas con lógica de validación, manejo de errores y retroalimentación visual.</p>
@@ -199,7 +199,7 @@
 
             <a href="https://github.com/AlejoFC08/Tp--Anime---POO" target="_blank"> 
                 <div class="project" data-aos="fade-up">
-                 <img src="imagenes/java-logo.png" alt="Logo de Java" style="object-fit: contain; padding: 10px; background: white;">
+                 <img src="imagenes/java-logo.png" alt="Logo de Java" class="logo-tecnologia">
                  <div class="info-project">
                      <h3>Sistema de Anime (TP Final POO)</h3>
                      <p>Trabajo final de la materia Paradigmas Orientados a Objetos. Modelado de dominio complejo aplicando herencia, polimorfismo y buenas prácticas.</p>
@@ -228,16 +228,7 @@
              <a class="red" href="mailto:alejoferraricioffi0@gmail.com?" target="_blank"><i class="fa-solid fa-envelope"></i></a>
              <a class="red" href="https://www.linkedin.com/in/alejo-ferrari-cioffi/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
          </div>  
-         <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">&copy; 2024 Alejo Ferrari Cioffi</p>
+         <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">&copy; 2026 Alejo Ferrari Cioffi</p>
       </footer>
-
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-        AOS.init({
-          duration: 1000, 
-          once: true,
-          offset: 100
-        });
-      </script>
 </body>
 </html>

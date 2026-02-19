@@ -204,7 +204,7 @@ h2 {
     letter-spacing: 2px;
 }
 
-/* --- SOBRE MÍ --- */
+/* --- SOBRE MÍ Y EXPERIENCIA --- */
 .sobremi {
     background-color: #fff;
 }
@@ -217,6 +217,10 @@ h2 {
 
 .sobremi .col {
     flex: 1;
+}
+
+.sobremi .col-completa {
+    width: 100%;
 }
 
 .sobremi h3 {
@@ -237,6 +241,23 @@ h2 {
     display: inline-block;
     width: 100px;
     color: #0056b3;
+}
+
+/* Estilos específicos para Experiencia */
+.experiencia-subtitulo {
+    color: #0056b3; 
+    margin-bottom: 10px;
+}
+
+.lista-experiencia {
+    list-style-type: disc !important; 
+    padding-left: 20px; 
+    color: #555;
+}
+
+.lista-experiencia li {
+    margin-bottom: 8px;
+    list-style: disc !important;
 }
 
 /* Stack Tecnológico */
@@ -305,6 +326,13 @@ h2 {
     border-radius: 8px;
     flex-shrink: 0;
     border: 1px solid #eee;
+}
+
+/* --- NUEVA CLASE PARA LOS LOGOS DE TECNOLOGÍA (Python/Java) --- */
+.project img.logo-tecnologia {
+    object-fit: contain;
+    padding: 12px;
+    background-color: #ffffff;
 }
 
 .info-project {
