@@ -305,6 +305,10 @@ h2::after {
     gap: 50px;
 }
 
+.sobremi .fila + .fila {
+    margin-top: 40px;
+}
+
 .sobremi .col {
     flex: 1;
 }
