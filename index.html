@@ -3,199 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Alejo Ferrari Cioffi</title>
-    
-    <meta property="og:title" content="Alejo Ferrari Cioffi | Desarrollador de Software">
+    <title>Alejo Ferrari Cioffi | Desarrollador Web Junior</title>
+    <meta name="description" content="Desarrollador web junior y estudiante en UADE. Sitios para clientes reales, proyectos en Python y Java y automatización con Google Sheets.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <meta property="og:title" content="Alejo Ferrari Cioffi | Desarrollador Web Junior">
     <meta property="og:description" content="Portafolio profesional. Proyectos en Python, Java, SQL y Desarrollo Web.">
     <meta property="og:image" content="https://alejofc08.github.io/Portafolio/imagenes/yo.png">
     <meta property="og:url" content="https://alejofc08.github.io/Portafolio/">
     <meta property="og:type" content="website">
-    <link rel="icon" href="imagenes/yo.png" type="image/png">
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="script.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header>
         <div class="container">
             <div class="logo">
-                <a href="#hero"><h3>Ferrari Cioffi</h3></a>
+                <a href="#hero" aria-label="Alejo Ferrari Cioffi, inicio"><span>Ferrari Cioffi</span></a>
             </div>
-            <div class="menu-toggle" id="mobile-menu" aria-expanded="false" aria-controls="nav-list">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="#sobremi">Sobre m&iacute;</a></li>
-                    <li><a href="#experiencia">Experiencia</a></li>
-                    <li><a href="#projects">Formaci&oacute;n</a></li>
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-list" hidden>
+                <span class="menu-icon" aria-hidden="true"></span>
+            </button>
+            <nav aria-label="Navegación principal">
+                <ul class="nav-list" id="nav-list">
                     <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#sobremi">Sobre mí</a></li>
+                    <li><a href="#projects">Formación</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
-    <section id="hero" data-aos="fade-in" data-aos-duration="1500">
+
+    <main id="contenido" tabindex="-1">
+    <section id="hero">
         <div class="hero-content">
-            <div class="imagen" data-aos="zoom-in" data-aos-delay="200"> 
-                <img src="imagenes/yo.png" alt="Alejo Ferrari Cioffi"> 
+            <div class="imagen">
+                <img src="imagenes/optimized/yo.webp" alt="Alejo Ferrari Cioffi" width="640" height="640" decoding="async" fetchpriority="high">
             </div>
-            <div class="texto" data-aos="fade-right" data-aos-delay="400">
-                <h1> Hola! </h1>
-                <h1>Soy Alejo Ferrari Cioffi</h1>
-                <p>Estudiante de Desarrollo de Software apasionado por la creaci&oacute;n de soluciones eficientes. Combino mi formaci&oacute;n t&eacute;cnica en lenguajes como Python y Java con habilidades pr&aacute;cticas de gesti&oacute;n y digitalizaci&oacute;n de procesos para resolver problemas reales en entornos din&aacute;micos.</p>
+            <div class="texto">
+                <p class="eyebrow">Desarrollador web junior</p>
+                <h1>Alejo Ferrari Cioffi</h1>
+                <p>Desarrollo sitios web para clientes y automatizo procesos con Google Sheets. Estudio Desarrollo de Software en UADE y busco sumarme a un equipo en un puesto trainee o junior.</p>
                 <div class="redes">
-                    <a class="CV" href="CV - Ferrari Cioffi Alejo.pdf" target="_blank" download="CV_Alejo_Ferrari_Cioffi.pdf"> 
-                        <button class="ui-btn">
-                            <span>Descargar CV</span>
-                        </button> 
-                    </a>                     
-                    <a class="red" href="https://github.com/AlejoFC08" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a class="red" href="mailto:alejoferraricioffi0@gmail.com?" target="_blank"><i class="fa-solid fa-envelope"></i></a> 
-                    <a class="red" href="https://www.linkedin.com/in/alejo-ferrari-cioffi/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="ui-btn primary-btn" href="#proyectos">Ver proyectos</a>
+                    <a class="CV ui-btn" href="CV-Alejo-Ferrari-Cioffi.pdf" download>Descargar CV</a>
+                    <a class="red" aria-label="GitHub (abre en otra pestaña)" href="https://github.com/AlejoFC08" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .8a11.3 11.3 0 0 0-3.57 22c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.26-1.65-1.26-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.51-.28-5.15-1.26-5.15-5.59 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.44.11-3 0 0 .95-.31 3.11 1.16a10.9 10.9 0 0 1 5.66 0c2.16-1.47 3.11-1.16 3.11-1.16.62 1.56.23 2.71.12 3 .72.79 1.15 1.8 1.15 3.03 0 4.34-2.65 5.3-5.17 5.58.41.35.77 1.04.77 2.1v3.08c0 .3.2.65.78.54A11.3 11.3 0 0 0 12 .8Z"/></svg></a>
+                    <a class="red" aria-label="Enviar un correo" href="mailto:alejoferraricioffi0@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+                    <a class="red" aria-label="LinkedIn (abre en otra pestaña)" href="https://www.linkedin.com/in/alejo-ferrari-cioffi/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><circle cx="5" cy="5" r="2"/><path d="M3 9h4v12H3zM10 9h4v1.7C15 9.3 16 9 17.3 9c3 0 3.7 2 3.7 4.8V21h-4v-6.4c0-1.4-.2-2.3-1.5-2.3-1.4 0-1.5 1.1-1.5 2.3V21h-4z"/></svg></a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobremi" class="sobremi">
-        <div class="contenido-seccion">
-            <h2 data-aos="fade-up">Sobre M&iacute;</h2>
-            <p data-aos="fade-up"><span>Hola, soy Alejo Ferrari Cioffi.</span> Me considero una persona organizada, resolutiva, con capacidad para trabajar en equipo e impulsar el desarrollo de proyectos tecnol&oacute;gicos que aporten valor real.</p>
-            <div class="fila">
-                <div class="col" data-aos="fade-right">
-                    <h3>Datos Personales</h3>
-                    <ul>
-                        <li><strong>Direcci&oacute;n:</strong> Paternal, 1416 CABA</li>
-                        <li><strong>Tel&eacute;fono:</strong> 1165520810</li>
-                        <li><strong>Email:</strong> alejoferraricioffi0@gmail.com</li>
-                    </ul>
-                </div>
-                <div class="col" data-aos="fade-left">
-                    <h3>Tecnolog&iacute;as</h3>
-                    <div class="contenedor-intereses">
-                        <div class="interes"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
-                        <div class="interes"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
-                        <div class="interes"><i class="fa-brands fa-js"></i><span>JS</span></div>
-                        <div class="interes"><i class="fa-brands fa-python"></i><span>PYTHON</span></div>
-                        <div class="interes"><i class="fa-solid fa-database"></i><span>SQL</span></div>
-                        <div class="interes"><i class="fa-brands fa-java"></i><span>JAVA</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiencia" class="sobremi">
-        <div class="contenido-seccion">
-            <h2 data-aos="fade-up">Experiencia Laboral</h2>
-            <div class="fila">
-                <div class="col col-completa" data-aos="fade-up">
-                    <h3>Preceptor y L&iacute;der de Digitalizaci&oacute;n</h3>
-                    <p class="experiencia-subtitulo"><strong>Colegio Fasta Monse&ntilde;or Aneiros</strong> | Julio 2021 - Actualidad</p>
-                    <ul class="lista-experiencia">
-                        <li>Dise&ntilde;e y desarroll&eacute; un sistema automatizado para el seguimiento y reporte de asistencia utilizando funciones avanzadas de Google Sheets, reduciendo significativamente los tiempos operativos.</li>
-                        <li>Lider&eacute; iniciativas de transformaci&oacute;n digital para optimizar la gesti&oacute;n de la informaci&oacute;n, mejorando la integridad de los datos y la comunicaci&oacute;n entre equipos administrativos.</li>
-                        <li>Coordin&eacute; actividades diarias con un fuerte enfoque en la resoluci&oacute;n &aacute;gil de problemas y la organizaci&oacute;n eficiente.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="fila">
-                <div class="col col-completa" data-aos="fade-up">
-                    <h3>Desarrollo Web Freelance</h3>
-                    <p class="experiencia-subtitulo"><strong>Proyectos Independientes</strong> | Abril 2024 - Septiembre 2026</p>
-                    <ul class="lista-experiencia">
-                        <li>Desarroll&eacute; sitios web a medida para clientes reales (estudio contable, empresa de mantenimiento y emprendimiento de regalos), ocup&aacute;ndome del dise&ntilde;o, la programaci&oacute;n y la puesta en producci&oacute;n de cada proyecto.</li>
-                        <li>Trabaj&eacute; de forma independiente en cada proyecto, coordinando directamente con el cliente para entender sus necesidades y ajustar el resultado final.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2 data-aos="fade-up">Estudios</h2>
-        <div class="project" data-aos="fade-up">
-            <img src="imagenes/UADE-FOTO1-1.jpeg" alt="uade">
-            <div class="info-project">
-                <h3>TECNICATURA UNIVERSITARIA EN DESARROLLO DE SOFTWARE</h3>
-                <p>UADE, CABA | JULIO 2024 - ACTUALIDAD</p>
-            </div>
-        </div>
-        <div class="project" data-aos="fade-up">
-            <img src="imagenes/Colegio-FASTA-Monseñor-Aneiros_en-Flores.jpg" alt="fasta">
-            <div class="info-project">
-                <h3>BACHILLER MERCANTIL</h3>
-                <p>INSTITUTO FASTA MONSE&ntilde;OR ANEIROS, CABA | 2014 - 2018</p>
-            </div>
-        </div>
-        <h2 data-aos="fade-up">Cursos</h2>
-        <div class="project" data-aos="fade-up">
-            <img src="imagenes/JA.jpeg" alt="JUNIOR">
-            <div class="info-project">
-                <h3>JUNIOR ACHIEVEMENT</h3>
-                <p>CURSO "YO PUEDO PROGRAMAR" (2023)</p>
             </div>
         </div>
     </section>
 
     <section id="proyectos" class="portfolio">
         <div class="contenido-seccion">
-            <h2 data-aos="fade-up">Proyectos</h2>
+            <h2>Proyectos</h2>
+            <p class="section-intro">Sitios publicados para clientes, herramientas de gestión y proyectos de mi formación. Cada uno muestra una forma distinta de resolver un problema.</p>
             <div class="lista-proyectos">
-                <!-- Nuevo Proyecto Nexmant -->
-                <a href="https://nexmant.com.ar/" target="_blank">
-                    <div class="project" data-aos="fade-up">
-                        <img src="imagenes/nexmant.png" alt="Nexmant Web">
+                <a href="https://nexmant.com.ar/" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                        <img src="imagenes/optimized/nexmant.webp" alt="Nexmant Web" width="1000" height="678" decoding="async" loading="lazy">
                         <div class="info-project">
                             <h3>Nexmant</h3>
-                            <p><strong>Proyecto Freelance.</strong> Desarrollo integral de sitio web responsivo y moderno. Diseño centrado en la experiencia de usuario y optimización de interfaz.</p>
+                            <p class="project-kind">Cliente real · Freelance</p>
+                            <p><strong>Necesidad:</strong> presentar los servicios de una empresa de mantenimiento y permitir la actualización de su contenido.</p>
+                            <p><strong>Mi aporte:</strong> desarrollé el sitio adaptable a celulares, los servicios y la galería dinámicos, y un panel de administración conectado a Google Apps Script.</p>
+                            <p><strong>Resultado:</strong> un sitio publicado con gestión de servicios e imágenes y consultas por WhatsApp.</p>
                             <div class="tags">
-                                <span class="tag">Desarrollo Web</span>
-                                <span class="tag">Freelance</span>
-                                <span class="tag">UX/UI</span>
+                                <span class="tag">HTML / CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Apps Script</span>
                             </div>
+                            <span class="project-link">Visitar sitio <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></span>
                         </div>
                     </div>
                 </a>
 
-                <a href="https://alejofc08.github.io/WebHappyBox/index.html" target="_blank">
-                    <div class="project" data-aos="fade-up">
-                        <img src="imagenes/happybox.jpg" alt="HappyBox Web">
+                <a href="https://alejofc08.github.io/WebHappyBox/index.html" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                        <img src="imagenes/optimized/happybox.webp" alt="HappyBox Web" width="1000" height="650" decoding="async" loading="lazy">
                         <div class="info-project">
                             <h3>HappyBox</h3>
-                            <p><strong>Proyecto Freelance (Emprendimiento Real).</strong> Sitio web para tienda de regalos y cajas sorpresa, con cat&aacute;logo organizado por categor&iacute;as y contacto directo por WhatsApp para coordinar pedidos.</p>
+                            <p class="project-kind">Cliente real · Freelance</p>
+                            <p><strong>Necesidad:</strong> mostrar el catálogo de regalos y facilitar la preparación de pedidos.</p>
+                            <p><strong>Mi aporte:</strong> desarrollé el catálogo con productos desde Google Sheets mediante una API de Google Apps Script y un carrito persistente en localStorage.</p>
+                            <p><strong>Resultado:</strong> los visitantes pueden armar su pedido desde el celular y enviarlo por WhatsApp.</p>
                             <div class="tags">
-                                <span class="tag">Desarrollo Web</span>
-                                <span class="tag">E-commerce</span>
-                                <span class="tag">UX/UI</span>
+                                <span class="tag">HTML / CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Apps Script</span>
                             </div>
+                            <span class="project-link">Visitar sitio <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></span>
                         </div>
                     </div>
                 </a>
 
-                <a href="https://estudiocontablefretesgarcia.com.ar" target="_blank">
-                    <div class="project" data-aos="fade-up">
-                        <img src="imagenes/FretesGarcia.png" alt="Estudio Contable Fretes Garcia">
+                <a href="https://estudiocontablefretesgarcia.com.ar" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                        <img src="imagenes/optimized/FretesGarcia.webp" alt="Estudio Contable Fretes Garcia" width="638" height="700" decoding="async" loading="lazy">
                         <div class="info-project">
                             <h3>Estudio Fretes Garcia</h3>
-                            <p><strong>Proyecto Freelance (Cliente Real).</strong> Sitio profesional para estudio contable. Interfaz moderna que refleja la identidad corporativa y optimiza la experiencia de usuario.</p>
+                            <p class="project-kind">Cliente real · Freelance</p>
+                            <p><strong>Necesidad:</strong> contar con una presencia web propia para el estudio contable.</p>
+                            <p><strong>Mi aporte:</strong> coordiné con el cliente el diseño y desarrollé el sitio de acuerdo con su identidad profesional.</p>
+                            <p><strong>Resultado:</strong> sitio publicado en el dominio del estudio, desde el diseño hasta la puesta en producción.</p>
                             <div class="tags">
-                                <span class="tag">Web Design</span>
+                                <span class="tag">Desarrollo Web</span>
                                 <span class="tag">Profesional</span>
                                 <span class="tag">UX/UI</span>
                             </div>
+                            <span class="project-link">Visitar sitio <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></span>
                         </div>
                     </div>
                 </a>
-                <a href="https://github.com/AlejoFC08/Wordle" target="_blank">
-                    <div class="project" data-aos="fade-up">
-                        <img src="imagenes/wordle.png" alt="Logo de Wordle" class="logo-tecnologia">
+                <a href="https://github.com/AlejoFC08/Wordle" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                        <img src="imagenes/optimized/wordle.webp" alt="Logo de Wordle" class="logo-tecnologia" width="310" height="163" decoding="async" loading="lazy">
                         <div class="info-project">
                             <h3>Juego Wordle (Python)</h3>
                             <p>Implementaci&oacute;n del cl&aacute;sico juego de adivinanzas con l&oacute;gica de validaci&oacute;n, manejo de errores y retroalimentaci&oacute;n visual.</p>
@@ -204,12 +132,13 @@
                                 <span class="tag">L&oacute;gica</span>
                                 <span class="tag">Algoritmos</span>
                             </div>
+                            <span class="project-link">Ver código <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></span>
                         </div>
                     </div>
                 </a>
-                <a href="https://github.com/AlejoFC08/Tp--Anime---POO" target="_blank">
-                    <div class="project" data-aos="fade-up">
-                        <img src="imagenes/POO.png" alt="Sistema Anime POO" class="logo-tecnologia">
+                <a href="https://github.com/AlejoFC08/Tp--Anime---POO" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                        <img src="imagenes/optimized/POO.webp" alt="Sistema Anime POO" class="logo-tecnologia" width="872" height="700" decoding="async" loading="lazy">
                         <div class="info-project">
                             <h3>Sistema de Anime (TP Final POO)</h3>
                             <p>Trabajo final de la materia Paradigmas Orientados a Objetos. Modelado de dominio complejo aplicando herencia, polimorfismo y buenas pr&aacute;cticas.</p>
@@ -218,12 +147,13 @@
                                 <span class="tag">POO</span>
                                 <span class="tag">Backend</span>
                             </div>
+                            <span class="project-link">Ver código <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></span>
                         </div>
                     </div>
                 </a>
-                <a href="https://docs.google.com/spreadsheets/d/19ACF92runr4h584cfvosrfeI_28gmNPtvJZwFxZaHrw/edit?gid=1358719739#gid=1358719739" target="_blank">
-                    <div class="project" data-aos="fade-up">
-                        <img src="imagenes/sheets-logo.jpg" alt="Logo de Google Sheets" class="logo-tecnologia">
+                <a href="https://docs.google.com/spreadsheets/d/19ACF92runr4h584cfvosrfeI_28gmNPtvJZwFxZaHrw/edit?gid=1358719739#gid=1358719739" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                        <img src="imagenes/optimized/sheets-logo.webp" alt="Logo de Google Sheets" class="logo-tecnologia" width="700" height="700" decoding="async" loading="lazy">
                         <div class="info-project">
                             <h3>Sistema de Gesti&oacute;n de Asistencia</h3>
                             <p>Desarroll&eacute; este sistema para mi trabajo actual. Arm&eacute; una estructura de varias hojas conectadas a una tabla de configuraci&oacute;n. Adem&aacute;s, le integr&eacute; alertas autom&aacute;ticas que detectan al instante cuando un alumno supera el l&iacute;mite de faltas.</p>
@@ -232,12 +162,13 @@
                                 <span class="tag">L&oacute;gica Condicional</span>
                                 <span class="tag">Gesti&oacute;n de Datos</span>
                             </div>
+                            <span class="project-link">Ver herramienta <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></span>
                         </div>
                     </div>
                 </a>
-                <a href="https://docs.google.com/spreadsheets/d/1vSXauGo4Yr0sD_HwxplYufvDd3igNPvVMz1o4vU5hWk/edit?gid=127914283#gid=127914283" target="_blank">
-                    <div class="project" data-aos="fade-up">
-                        <img src="imagenes/sheets-logo.jpg" alt="Logo de Google Sheets" class="logo-tecnologia">
+                <a href="https://docs.google.com/spreadsheets/d/1vSXauGo4Yr0sD_HwxplYufvDd3igNPvVMz1o4vU5hWk/edit?gid=127914283#gid=127914283" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                        <img src="imagenes/optimized/sheets-logo.webp" alt="Logo de Google Sheets" class="logo-tecnologia" width="700" height="700" decoding="async" loading="lazy">
                         <div class="info-project">
                             <h3>Generador de Informes Acad&eacute;micos</h3>
                             <p>Cre&eacute; esta herramienta para optimizar los tiempos en mi entorno laboral. Me encargu&eacute; de cruzar los datos de todas las materias para generar un bolet&iacute;n autom&aacute;tico por cada alumno.</p>
@@ -246,12 +177,13 @@
                                 <span class="tag">Automatizaci&oacute;n</span>
                                 <span class="tag">Dashboards</span>
                             </div>
+                            <span class="project-link">Ver herramienta <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></span>
                         </div>
                     </div>
                 </a>
-                <a href="https://docs.google.com/spreadsheets/d/1BJjjtTY0UTiN0-pSJJOjrJ8T5IOenZutsVk8rzSbbas/edit?gid=40498718#gid=40498718" target="_blank">
-                    <div class="project" data-aos="fade-up">
-                        <img src="imagenes/sheets-logo.jpg" alt="Logo de Google Sheets" class="logo-tecnologia">
+                <a href="https://docs.google.com/spreadsheets/d/1BJjjtTY0UTiN0-pSJJOjrJ8T5IOenZutsVk8rzSbbas/edit?gid=40498718#gid=40498718" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                        <img src="imagenes/optimized/sheets-logo.webp" alt="Logo de Google Sheets" class="logo-tecnologia" width="700" height="700" decoding="async" loading="lazy">
                         <div class="info-project">
                             <h3>Registro y Trazabilidad de Sanciones</h3>
                             <p>Dise&ntilde;&eacute; este registro para llevar el seguimiento individual de incidencias. Adem&aacute;s del panel de resumen global, le program&eacute; una vista din&aacute;mica de "Impresi&oacute;n" que genera autom&aacute;ticamente un documento formal.</p>
@@ -260,13 +192,13 @@
                                 <span class="tag">Trazabilidad</span>
                                 <span class="tag">Reportes</span>
                             </div>
+                            <span class="project-link">Ver herramienta <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></span>
                         </div>
                     </div>
                 </a>
-                                <!-- Proyectos existentes -->
-                <a href="https://alejofc08.github.io/Corte-Criollo/" target="_blank">
-                    <div class="project" data-aos="fade-up">
-                        <img src="imagenes/CorteCriollo.png" alt="Corte Criollo Barber">
+                <a href="https://alejofc08.github.io/Corte-Criollo/" target="_blank" rel="noopener noreferrer">
+                    <div class="project">
+                        <img src="imagenes/optimized/CorteCriollo.webp" alt="Corte Criollo Barber" width="639" height="700" decoding="async" loading="lazy">
                         <div class="info-project">
                             <h3>Corte Criollo</h3>
                             <p>Desarrollo de p&aacute;gina web para barber&iacute;a ficticia. Dise&ntilde;o e implementaci&oacute;n de interfaz funcional, responsive y optimizada.</p>
@@ -275,6 +207,7 @@
                                 <span class="tag">JavaScript</span>
                                 <span class="tag">Responsive</span>
                             </div>
+                            <span class="project-link">Visitar sitio <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></span>
                         </div>
                     </div>
                 </a>
@@ -282,16 +215,98 @@
         </div>
     </section>
 
+    <section id="experiencia" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Experiencia Laboral</h2>
+            <div class="fila">
+                <div class="col col-completa">
+                    <h3>Desarrollo Web Freelance</h3>
+                    <p class="experiencia-subtitulo"><strong>Proyectos Independientes</strong> | Abril 2024 - Actualidad</p>
+                    <ul class="lista-experiencia">
+                        <li>Desarroll&eacute; sitios web a medida para clientes reales (estudio contable, empresa de mantenimiento y emprendimiento de regalos), ocup&aacute;ndome del dise&ntilde;o, la programaci&oacute;n y la puesta en producci&oacute;n de cada proyecto.</li>
+                        <li>Trabaj&eacute; de forma independiente en cada proyecto, coordinando directamente con el cliente para entender sus necesidades y ajustar el resultado final.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col col-completa">
+                    <h3>Preceptor · Digitalización de procesos</h3>
+                    <p class="experiencia-subtitulo"><strong>Colegio Fasta Monse&ntilde;or Aneiros</strong> | Julio 2021 - Actualidad</p>
+                    <ul class="lista-experiencia">
+                        <li>Diseñé y desarrollé un sistema en Google Sheets para gestionar asistencia, con alertas automáticas, boletines por alumno y seguimiento de sanciones.</li>
+                        <li>Impulsé la digitalización de procesos y la implementación de herramientas para la comunicación entre directivos, docentes y familias.</li>
+                        <li>Gestioné la convivencia estudiantil y la organización cotidiana de los cursos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre M&iacute;</h2>
+            <p class="section-intro">Combino mi formación en desarrollo de software con experiencia directa con clientes y equipos educativos. Me interesa transformar necesidades cotidianas en herramientas concretas: desde un catálogo web hasta reportes académicos automáticos.</p>
+            <div class="fila">
+                <div class="col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><strong>Ubicación:</strong> La Paternal, CABA</li>
+                        <li><strong>Teléfono:</strong> <a href="tel:+541165520810">11 6552-0810</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:alejoferraricioffi0@gmail.com">alejoferraricioffi0@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Tecnolog&iacute;as</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes"><span class="tech-mark" aria-hidden="true">&lt;/&gt;</span><span>HTML</span></div>
+                        <div class="interes"><span class="tech-mark" aria-hidden="true">#</span><span>CSS</span></div>
+                        <div class="interes"><span class="tech-mark" aria-hidden="true">JS</span><span>JS</span></div>
+                        <div class="interes"><span class="tech-mark" aria-hidden="true">Py</span><span>PYTHON</span></div>
+                        <div class="interes"><span class="tech-mark" aria-hidden="true">SQL</span><span>SQL básico</span></div>
+                        <div class="interes"><span class="tech-mark" aria-hidden="true">Java</span><span>JAVA</span></div>
+                        <div class="interes"><span class="tech-mark" aria-hidden="true">Git</span><span>Git / GitHub</span></div>
+                        <div class="interes"><span class="tech-mark" aria-hidden="true">GS</span><span>Apps Script</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Estudios</h2>
+        <div class="project">
+            <img src="imagenes/optimized/UADE-FOTO1-1.webp" alt="Universidad Argentina de la Empresa" width="954" height="700" decoding="async" loading="lazy">
+            <div class="info-project">
+                <h3>TECNICATURA UNIVERSITARIA EN DESARROLLO DE SOFTWARE</h3>
+                <p>UADE, CABA | JULIO 2024 - ACTUALIDAD</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="imagenes/optimized/Colegio-FASTA-Monseñor-Aneiros_en-Flores.webp" alt="Colegio Fasta Monseñor Aneiros" width="800" height="473" decoding="async" loading="lazy">
+            <div class="info-project">
+                <h3>BACHILLER MERCANTIL</h3>
+                <p>INSTITUTO FASTA MONSE&ntilde;OR ANEIROS, CABA | 2014 - 2018</p>
+            </div>
+        </div>
+        <h2>Cursos</h2>
+        <div class="project">
+            <img src="imagenes/optimized/JA.webp" alt="Junior Achievement" width="1000" height="525" decoding="async" loading="lazy">
+            <div class="info-project">
+                <h3>JUNIOR ACHIEVEMENT</h3>
+                <p>CURSO "YO PUEDO PROGRAMAR" (2023)</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
     <footer>
+        <h2>Hablemos</h2>
+        <p class="footer-intro">Busco un puesto trainee o junior en desarrollo. Podés contactarme por correo o LinkedIn.</p>
         <div class="redes">
-            <a class="CV" href="CV - Ferrari Cioffi Alejo.pdf" target="_blank" download="CV_Alejo_Ferrari_Cioffi.pdf"> 
-                <button class="ui-btn">
-                    <span>Descargar CV</span>
-                </button> 
-            </a> 
-            <a class="red" href="https://github.com/AlejoFC08" target="_blank"><i class="fa-brands fa-github"></i></a> 
-            <a class="red" href="mailto:alejoferraricioffi0@gmail.com?" target="_blank"><i class="fa-solid fa-envelope"></i></a> 
-            <a class="red" href="https://www.linkedin.com/in/alejo-ferrari-cioffi/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a> 
+            <a class="CV ui-btn" href="CV-Alejo-Ferrari-Cioffi.pdf" download>Descargar CV</a>
+            <a class="red" aria-label="GitHub (abre en otra pestaña)" href="https://github.com/AlejoFC08" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .8a11.3 11.3 0 0 0-3.57 22c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.26-1.65-1.26-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.51-.28-5.15-1.26-5.15-5.59 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.44.11-3 0 0 .95-.31 3.11 1.16a10.9 10.9 0 0 1 5.66 0c2.16-1.47 3.11-1.16 3.11-1.16.62 1.56.23 2.71.12 3 .72.79 1.15 1.8 1.15 3.03 0 4.34-2.65 5.3-5.17 5.58.41.35.77 1.04.77 2.1v3.08c0 .3.2.65.78.54A11.3 11.3 0 0 0 12 .8Z"/></svg></a>
+            <a class="red" aria-label="Enviar un correo" href="mailto:alejoferraricioffi0@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+            <a class="red" aria-label="LinkedIn (abre en otra pestaña)" href="https://www.linkedin.com/in/alejo-ferrari-cioffi/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><circle cx="5" cy="5" r="2"/><path d="M3 9h4v12H3zM10 9h4v1.7C15 9.3 16 9 17.3 9c3 0 3.7 2 3.7 4.8V21h-4v-6.4c0-1.4-.2-2.3-1.5-2.3-1.4 0-1.5 1.1-1.5 2.3V21h-4z"/></svg></a>
         </div>
         <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">&copy; 2026 Alejo Ferrari Cioffi</p>
     </footer>

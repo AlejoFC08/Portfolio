@@ -1,68 +1,54 @@
-// ==========================================
-// 1. LÓGICA DEL MENÚ HAMBURGUESA
-// ==========================================
+// Navigation remains available when JavaScript is disabled.
 const menuToggle = document.getElementById('mobile-menu');
-const navList = document.querySelector('nav ul.nav-list');
+const navList = document.getElementById('nav-list');
+const mobileViewport = window.matchMedia('(max-width: 768px)');
 
-// Alternar el menú
-menuToggle.addEventListener('click', () => {
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !isExpanded);
-    navList.classList.toggle('active');
-});
+if (menuToggle && navList) {
+    const setMenuOpen = (open) => {
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+        navList.classList.toggle('active', open);
+    };
 
-// Cerrar el menú al hacer clic en un enlace
-document.querySelectorAll('.nav-list a').forEach(link => {
-    link.addEventListener('click', () => {
-        navList.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.addEventListener('click', () => {
+        setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
     });
-});
 
-// Cerrar si clic afuera
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('#mobile-menu') && !e.target.closest('.nav-list')) {
-        navList.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-    }
-});
-
-// ==========================================
-// 2. LÓGICA DE SCROLL SUAVE (Smooth Scroll)
-// ==========================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Evita el salto brusco automático
-
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            // Calculamos la posición restando la altura de tu header (aprox 80px)
-            // para que el título no quede tapado por la barra de navegación.
-            const headerOffset = 80; 
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
+    navList.addEventListener('click', (event) => {
+        const link = event.target.closest('a');
+        if (!link) return;
+        setMenuOpen(false);
+        // Move focus with the navigation so it never remains inside a hidden menu.
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
         }
     });
-});
 
-// ==========================================
-// 3. INICIALIZACIÓN DE ANIMACIONES AOS
-// ==========================================
-// Usamos DOMContentLoaded para asegurarnos de que el HTML haya cargado 
-// antes de inicializar los efectos visuales.
-document.addEventListener('DOMContentLoaded', () => {
-    AOS.init({
-        duration: 1000, // Duración de la animación (1 segundo)
-        once: true,     // La animación solo ocurre la primera vez que haces scroll
-        offset: 100     // Distancia de scroll antes de que empiece a animar
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+            setMenuOpen(false);
+            menuToggle.focus();
+        }
     });
-});
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('#mobile-menu') && !event.target.closest('#nav-list')) {
+            setMenuOpen(false);
+        }
+    });
+
+    document.addEventListener('focusin', (event) => {
+        if (!navList.contains(event.target) && !menuToggle.contains(event.target)) setMenuOpen(false);
+    });
+
+    mobileViewport.addEventListener('change', () => {
+        if (mobileViewport.matches && navList.contains(document.activeElement)) menuToggle.focus();
+        if (!mobileViewport.matches && document.activeElement === menuToggle) navList.querySelector('a').focus();
+        setMenuOpen(false);
+    });
+
+    document.documentElement.classList.add('js');
+    menuToggle.hidden = false;
+}
