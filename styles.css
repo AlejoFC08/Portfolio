@@ -244,6 +244,13 @@ header nav ul li a:hover {
     flex-wrap: wrap;
 }
 
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
 .redes .red {
     width: 45px;
     height: 45px;
@@ -611,6 +618,11 @@ footer .redes {
 
     .redes {
         justify-content: center;
+    }
+
+    .redes-sociales {
+        flex-basis: 100%;
+        margin-top: 5px;
     }
 
     .sobremi .fila {
