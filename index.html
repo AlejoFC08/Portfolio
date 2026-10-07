@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alejo Ferrari Cioffi | Desarrollador Web Junior</title>
     <meta name="description" content="Desarrollador web junior y estudiante en UADE. Sitios para clientes reales, proyectos en Python y Java y automatización con Google Sheets.">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#f7f8f5">
 
     <meta property="og:title" content="Alejo Ferrari Cioffi | Desarrollador Web Junior">
     <meta property="og:description" content="Portafolio profesional. Proyectos en Python, Java, SQL y Desarrollo Web.">
-    <meta property="og:image" content="https://alejofc08.github.io/Portafolio/imagenes/yo.png">
-    <meta property="og:url" content="https://alejofc08.github.io/Portafolio/">
+    <meta property="og:image" content="https://alejofc08.github.io/Portfolio/imagenes/yo.png">
+    <meta property="og:url" content="https://alejofc08.github.io/Portfolio/">
     <meta property="og:type" content="website">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=9f91959-mobile">
+    <link rel="stylesheet" href="styles.css?v=20261007-design">
     <script defer src="script.js?v=0903b43"></script>
 </head>
 <body>
@@ -23,7 +23,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="#hero" aria-label="Alejo Ferrari Cioffi, inicio"><span>Ferrari Cioffi</span></a>
+                <a href="#hero" aria-label="Alejo Ferrari Cioffi, inicio"><span class="brand-mark" aria-hidden="true">AF.</span><span>Ferrari Cioffi</span></a>
             </div>
             <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-list" hidden>
                 <span class="menu-icon" aria-hidden="true"></span>
@@ -43,11 +43,12 @@
     <section id="hero">
         <div class="hero-content">
             <div class="imagen">
+                <span class="portrait-label">Buenos Aires, Argentina</span>
                 <img src="imagenes/optimized/yo.webp" alt="Alejo Ferrari Cioffi" width="640" height="640" decoding="async" fetchpriority="high">
             </div>
             <div class="texto">
                 <p class="eyebrow">Desarrollador web junior</p>
-                <h1>Alejo Ferrari Cioffi</h1>
+                <h1>Alejo<br>Ferrari Cioffi<span class="name-dot" aria-hidden="true">.</span></h1>
                 <p>Soy estudiante de Desarrollo de Software en UADE y desarrollador web freelance. Me interesa crear soluciones útiles y seguir creciendo junto a un equipo en un puesto trainee o junior.</p>
                 <div class="redes">
                     <a class="ui-btn primary-btn" href="#proyectos">Ver proyectos</a>
@@ -64,7 +65,8 @@
 
     <section id="proyectos" class="portfolio">
         <div class="contenido-seccion">
-            <h2>Proyectos</h2>
+            <p class="section-label">01 / Proyectos seleccionados</p>
+            <h2>Ideas que se convierten<br>en herramientas.</h2>
             <p class="section-intro">Sitios publicados para clientes, herramientas de gestión y proyectos de mi formación. Cada uno muestra una forma distinta de resolver un problema.</p>
             <div class="lista-proyectos">
                 <a href="https://docs.google.com/spreadsheets/d/1zKtE4GfEh0wh0r41DDaHE5PE_omH10w5tu3Kq075ejM/edit" target="_blank" rel="noopener noreferrer">
@@ -238,7 +240,8 @@
 
     <section id="experiencia" class="sobremi">
         <div class="contenido-seccion">
-            <h2>Experiencia Laboral</h2>
+            <p class="section-label">02 / Recorrido profesional</p>
+            <h2>Experiencia laboral</h2>
             <div class="fila">
                 <div class="col col-completa">
                     <h3>Desarrollo de sistema de recibos de sueldo</h3>
@@ -275,7 +278,8 @@
 
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
-            <h2>Sobre M&iacute;</h2>
+            <p class="section-label">03 / Un poco sobre mí</p>
+            <h2>Tecnología con propósito.</h2>
             <p class="section-intro">Combino mi formación en desarrollo de software con experiencia directa con clientes y equipos educativos. Me interesa transformar necesidades cotidianas en herramientas concretas: desde un catálogo web hasta reportes académicos automáticos.</p>
             <div class="fila">
                 <div class="col">
@@ -304,34 +308,38 @@
     </section>
 
     <section id="projects">
-        <h2>Estudios</h2>
+        <div class="contenido-seccion">
+        <p class="section-label">04 / Aprendizaje continuo</p>
+        <h2>Formación</h2>
         <div class="project">
             <img src="imagenes/optimized/UADE-FOTO1-1.webp" alt="Universidad Argentina de la Empresa" width="954" height="700" decoding="async" loading="lazy">
             <div class="info-project">
-                <h3>TECNICATURA UNIVERSITARIA EN DESARROLLO DE SOFTWARE</h3>
+                <h3>Tecnicatura Universitaria en Desarrollo de Software</h3>
                 <p>UADE, CABA | JULIO 2024 - ACTUALIDAD</p>
             </div>
         </div>
         <div class="project">
             <img src="imagenes/optimized/Colegio-FASTA-Monseñor-Aneiros_en-Flores.webp" alt="Colegio Fasta Monseñor Aneiros" width="800" height="473" decoding="async" loading="lazy">
             <div class="info-project">
-                <h3>BACHILLER MERCANTIL</h3>
+                <h3>Bachiller Mercantil</h3>
                 <p>INSTITUTO FASTA MONSE&ntilde;OR ANEIROS, CABA | 2014 - 2018</p>
             </div>
         </div>
-        <h2>Cursos</h2>
+        <h3 class="education-subheading">Cursos</h3>
         <div class="project">
             <img src="imagenes/optimized/JA.webp" alt="Junior Achievement" width="1000" height="525" decoding="async" loading="lazy">
             <div class="info-project">
-                <h3>JUNIOR ACHIEVEMENT</h3>
+                <h3>Junior Achievement</h3>
                 <p>CURSO "YO PUEDO PROGRAMAR" (2023)</p>
             </div>
+        </div>
         </div>
     </section>
 
     </main>
     <footer>
-        <h2>Hablemos</h2>
+        <p class="section-label">El próximo paso</p>
+        <h2>¿Trabajamos juntos?</h2>
         <p class="footer-intro">Busco un puesto trainee o junior en desarrollo. Podés contactarme por correo o LinkedIn.</p>
         <div class="redes">
             <a class="CV ui-btn" href="CV-Alejo-Ferrari-Cioffi.pdf" download>Descargar CV</a>
